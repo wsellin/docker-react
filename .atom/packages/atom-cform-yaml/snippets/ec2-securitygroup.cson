@@ -1,0 +1,17 @@
+'.source.yaml':
+  'ec2-securitygroup':
+      'prefix': 'ec2-securitygroup'
+      'body':"""
+         ${1:ec2-securitygroup_name}:
+         	Type: AWS::EC2::SecurityGroup
+         	Properties:
+         		GroupDescription: ${2:String}     # required
+         		GroupName: ${3:String}     # optional
+         		SecurityGroupEgress:                # optional, list of Egress
+         			- ${4:Egress}
+         		SecurityGroupIngress:                # optional, list of Ingress
+         			- ${5:Ingress}
+         		Tags:                # optional, list of Tag
+         			- ${6:Tag}
+         		VpcId: ${7:String}     # optional
+"""

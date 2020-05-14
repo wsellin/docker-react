@@ -1,0 +1,56 @@
+{
+  "_from": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball",
+  "_id": "yaml-sortkey@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-DN/kp4MPXyg6vv8mRVXDXV6qEeJ8GTcKL+g/rQTpVF3H3L+G5e8FjrGdXkNrh93mzO0DKKsH/RAw3VnhvFOlLA==",
+  "_location": "/yaml-sortkey",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball",
+  "_shasum": "69f31d89b6753b320b8e0669952e5221be204477",
+  "_spec": "https://www.atom.io/api/packages/yaml-sortkey/versions/0.1.0/tarball",
+  "_where": "/tmp/apm-install-dir-120412-17640-1tdu0cn.dkgn",
+  "activationCommands": {
+    "atom-workspace": "mobi-locales:validate_buffer"
+  },
+  "activationHooks": [
+    "language-yaml:grammar-used"
+  ],
+  "bugs": {
+    "url": "https://github.com/akfernun/yaml-sortkeys/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "js-yaml": ">=3.6.1"
+  },
+  "deprecated": false,
+  "description": "Sort YAML keys and validate YAML",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/akfernun/yaml-sortkeys#readme",
+  "keywords": [
+    "yaml",
+    "sort",
+    "validate",
+    "autosort"
+  ],
+  "license": "MIT",
+  "main": "./lib/yaml-sortkey",
+  "name": "yaml-sortkey",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akfernun/yaml-sortkeys.git"
+  },
+  "version": "0.1.0"
+}

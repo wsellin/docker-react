@@ -1,0 +1,16 @@
+'.source.yaml':
+  'elasticsearchdestinationconfiguration':
+      'prefix': 'elasticsearchdestinationconfiguration'
+      'body':"""
+         BufferingHints: ${2:ElasticsearchBufferingHints}     # required
+         CloudWatchLoggingOptions: ${3:CloudWatchLoggingOptions}     # optional
+         DomainARN: ${4:String}     # required
+         IndexName: ${5:String}     # required
+         IndexRotationPeriod: ${6:String}     # required
+         ProcessingConfiguration: ${7:ProcessingConfiguration}     # optional
+         RetryOptions: ${8:ElasticsearchRetryOptions}     # required
+         RoleARN: ${9:String}     # required
+         S3BackupMode: ${10:String}     # required
+         S3Configuration: ${11:S3DestinationConfiguration}     # required
+         TypeName: ${12:String}     # required
+"""

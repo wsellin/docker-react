@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle AWS CloudFormation (YAML)",
+        "command": "atom-cform-yaml:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "AWS CloudFormation (YAML)",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "atom-cform-yaml:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "_from": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball",
+  "_id": "linter-yaml@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-PXegv0a35pEIj8/5gB1hrUDZKlzYEfiCiRs9jlrBmrhwScspR58ZzXzF5mzdRWysyLmA+3dCIUm2Bx237vmaoQ==",
+  "_location": "/linter-yaml",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball",
+  "_shasum": "ef66f243885e512943ccd28f9537ce5a00b79549",
+  "_spec": "https://www.atom.io/api/packages/linter-yaml/versions/1.1.0/tarball",
+  "_where": "/tmp/apm-install-dir-120412-17605-yi3dfv.ilkp",
+  "bugs": {
+    "url": "https://github.com/ferhaty/linter-yaml/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "atom-linter": "^10.0.0"
+  },
+  "deprecated": false,
+  "description": "YAML provider for Linter",
+  "devDependencies": {
+    "babel-eslint": "latest",
+    "eslint": "latest"
+  },
+  "engines": {
+    "atom": ">0.95.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "rules": {
+      "strict": 0
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "atom": true
+    }
+  },
+  "homepage": "https://github.com/ferhaty/linter-yaml#readme",
+  "keywords": [
+    "lint",
+    "linter",
+    "yaml",
+    "yamllint",
+    "yaml-lint"
+  ],
+  "license": "MIT",
+  "main": "./lib/main.js",
+  "name": "linter-yaml",
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ferhaty@github.com/ferhaty/linter-yaml.git"
+  },
+  "version": "1.1.0"
+}

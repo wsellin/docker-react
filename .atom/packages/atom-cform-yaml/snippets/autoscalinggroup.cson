@@ -1,0 +1,33 @@
+'.source.yaml':
+  'autoscalinggroup':
+      'prefix': 'autoscalinggroup'
+      'body':"""
+         ${1:autoscalinggroup_name}:
+         	Type: AWS::AutoScaling::AutoScalingGroup
+         	Properties:
+         		AvailabilityZones:                # optional, list of String
+         			- ${2:String}
+         		Cooldown: ${3:String}     # optional
+         		DesiredCapacity: ${4:String}     # optional
+         		HealthCheckGracePeriod: ${5:Integer}     # optional
+         		HealthCheckType: ${6:String}     # optional
+         		InstanceId: ${7:String}     # optional
+         		LaunchConfigurationName: ${8:String}     # optional
+         		LoadBalancerNames:                # optional, list of String
+         			- ${9:String}
+         		MaxSize: ${10:String}     # required
+         		MetricsCollection:                # optional, list of MetricsCollection
+         			- ${11:MetricsCollection}
+         		MinSize: ${12:String}     # required
+         		NotificationConfigurations:                # optional, list of NotificationConfiguration
+         			- ${13:NotificationConfiguration}
+         		PlacementGroup: ${14:String}     # optional
+         		Tags:                # optional, list of TagProperty
+         			- ${15:TagProperty}
+         		TargetGroupARNs:                # optional, list of String
+         			- ${16:String}
+         		TerminationPolicies:                # optional, list of String
+         			- ${17:String}
+         		VPCZoneIdentifier:                # optional, list of String
+         			- ${18:String}
+"""

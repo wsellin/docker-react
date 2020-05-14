@@ -1,0 +1,24 @@
+[directory]
+nautilus-icon-view-keep-aligned=true
+nautilus-icon-view-layout-timestamp=1589451849
+nautilus-desktop-icon-size=48
+
+[trash]
+nautilus-icon-position-timestamp=1589451849
+nautilus-icon-position=56,26
+icon-scale=1
+
+[appdata on nas.volume]
+nautilus-icon-position=56,146
+icon-scale=1
+nautilus-icon-position-timestamp=1589364928
+
+[lochlomond.sellin.name.volume]
+nautilus-icon-position=56,146
+icon-scale=1
+nautilus-icon-position-timestamp=1589452372
+
+[bds on nas.volume]
+nautilus-icon-position=56,306
+icon-scale=1
+nautilus-icon-position-timestamp=1589452401

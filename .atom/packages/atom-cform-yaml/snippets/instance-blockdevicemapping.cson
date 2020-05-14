@@ -1,0 +1,9 @@
+'.source.yaml':
+  'instance-blockdevicemapping':
+      'prefix': 'instance-blockdevicemapping'
+      'body':"""
+         DeviceName: ${2:String}     # optional
+         Ebs: ${3:EbsBlockDevice}     # optional
+         NoDevice: ${4:String}     # optional
+         VirtualName: ${5:String}     # optional
+"""

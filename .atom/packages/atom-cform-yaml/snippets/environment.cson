@@ -1,0 +1,20 @@
+'.source.yaml':
+  'environment':
+      'prefix': 'environment'
+      'body':"""
+         ${1:environment_name}:
+         	Type: AWS::ElasticBeanstalk::Environment
+         	Properties:
+         		ApplicationName: ${2:String}     # required
+         		CNAMEPrefix: ${3:String}     # optional
+         		Description: ${4:String}     # optional
+         		EnvironmentName: ${5:String}     # optional
+         		OptionSettings:                # optional, list of OptionSettings
+         			- ${6:OptionSettings}
+         		SolutionStackName: ${7:String}     # optional
+         		Tags:                # optional, list of Tag
+         			- ${8:Tag}
+         		TemplateName: ${9:String}     # optional
+         		Tier: ${10:Tier}     # optional
+         		VersionLabel: ${11:String}     # optional
+"""

@@ -1,0 +1,847 @@
+/* Retrait de profil, inscription, d√©connexion et connexion du menu forum */
+#navprofile, #navlogin, #navlogout, #navregister{ display:none; }
+
+/*   -- Base commune aux FORUMS -- */
+
+/* page d'accueil : icones des categories*/
+#idx1 h2{ background-position:0 -408px; }
+#idx2 h2{ background-position:0 -255px; }
+#idx3 h2{ background-position:0 -153px; }
+#idx4 h2{ background-position:0 -357px; }
+#idx5 h2{ background-position:0 -204px; }
+#idx6 h2{ background-position:0 -102px; }
+#idx7 h2{ background-position:0 -306px; }
+#idx8 { display: none; }
+
+.stickytext, .closedtext, .movedtext, .reportlink a/*, #brdwelcome .conr li span*/{ 
+  background:transparent url('../images/forum/icones.png') no-repeat; 
+  max-height:16px;
+}
+#pundelete form{ padding-bottom:15px; }
+
+/* Annonce importante */
+#announce{
+  margin:0 0 15px 16em;
+  border:1px solid #B0C0C0;
+  border-radius:5px;
+  -o-border-radius:5px;
+  -moz-border-radius:5px;
+  -khtml-border-radius:5px;
+}
+#announce{ margin-top:-1px !important; }
+
+#announce .hd{
+  padding-left:10px;
+  background-position:left top;
+  background-repeat:repeat-x;
+  border-bottom:2px groove #ADAEAE;
+}
+#announce h2{
+  margin:0px;
+  font-weight:bold;
+  font-size:1.1em;
+  text-align:left;
+}
+#announce-block{margin:10px}
+
+/* Annonce par forum */
+
+#announce-forum{
+  margin:0; padding:10px;
+  background-color:#F3F2F2;
+  border-color:#B0C0C0;
+  border-style:solid;
+  border-width :1px 1px 0 1px;
+  border-radius:5px 5px 0 0;
+  -moz-border-radius:5px 5px 0 0;
+  -o-border-radius:5px 5px 0 0;
+  -khtml-border-radius:5px 5px 0 0;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+}
+
+/* Cadre principal */
+/* pour decaler le contenu des menus */
+
+#mainindex, #main, #mainviewforum , #mainviewindex{
+  clear:left;
+  margin-left:16em; padding:0.5em; padding-top:0px; padding-bottom:0px;
+  background-color:#FFFFFF;
+  border-color:#BEC0C0;
+  border-style:solid;
+  border-width:0 1px 0 1px;
+}
+
+/* Pied de page avec les stats*/
+
+#brdstats{
+  margin:0; padding-left:30px; padding-right:30px; padding-top:10px;
+  background:#EDEDED url('../images/forum/Pied_gauche.png') repeat-y scroll left bottom;
+  border-radius:0 0 5px 5px;
+  -moz-border-radius:0 0 5px 5px;
+  -o-border-radius:0 0 5px 5px;
+  -khtml-border-radius:0 0 5px 5px;
+  border-color:#BEC0C0;
+  border-style:solid;
+  border-width:0 1px 1px;
+}
+#brdstats h2{display:none}
+
+#footer #brdfooter{
+  padding-top:1px;
+  background-color:white;
+  border-color:#BEC0C0;
+  border-style:solid;
+  border-width:0 1px 1px;
+  border-bottom:0;
+}
+/* LIGNE SUIVANTE COMMENTEE POUR L'AFFICHAGE DU BOUTON DE LOGIN.PHP ******/
+/*#punlogin #brdfooter{margin-top:-20px}*/
+
+/********* STYLE DE BASE **************/
+
+table{ margin:0 auto; }
+
+      /**  STYLES SPECIFIQUES DE L INTERIEUR DE LA  PAGE **/
+        
+/*** pour palier a des bugs avec les float:left; **/
+
+.clear, .clearer{ clear:both; }
+
+/* block de base FIXME :est-il utilise ?*/
+
+.block{ margin:1em; }
+
+/* fil d ariane */
+
+#navbar{
+  margin:-17px 0 0 0; padding-left:20px; padding-right:0.5em;
+  border-radius:5px 5px 0 0;
+  -o-border-radius:5px 5px 0 0;
+  -moz-border-radius:5px 5px 0 0;
+  -khtml-border-radius:5px 5px 0 0;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+}
+#navbar p{
+  margin:0px; padding:1px 0 1px 20px;
+}
+.linksb .crumbs, .linksb .postlink{ display:none; }
+.linkst{
+  margin-top:0px;
+  margin-bottom:0.5em;
+}
+.linkst, .linksb{ margin-left:20px; }
+.crumbs{ margin:0; clear:both; }
+
+/* bouton pour cacher la colonne de liens*/
+
+#hidemenu{
+  position:relative;
+  margin:4px 0 0 -4px; padding:0;
+  width:12px; height:14px;
+  background:transparent url('../images/commun/bt_open_close.png');
+  background-position:0 14px;
+  cursor:pointer;
+}
+
+/*******redirection**********/
+#punredirect .top-box, #punredirect .end-box{ height:20px; }
+#punredirect{ margin:1em; }
+#punredirect #brdmain{
+  margin-top:-30px; margin-bottom:-15px;
+}
+
+/* mise en forme des tableaux des messages et des categories et des listes de posts */
+
+.blocktable h2, .blockpost h2, #quickpost h2{
+  margin-left:-2px; padding-top:7px;
+  height:44px;
+  background-repeat:no-repeat;
+  background-position:0px 0px;
+  text-indent:55px;
+  /*font-size:1.1em;*/
+}
+.blockpost h2, #quickpost h2, #postreview .blockpost .postleft dt{background-position:0 -51px}
+.blockpost h2, #quickpost h2{
+  background-repeat:no-repeat;
+  margin:0;
+  margin-left:-6px;
+  padding-right:6px;
+}
+.blockpost, #quickpost, .blocktable{
+  background-repeat:repeat-x;
+}
+.blocktable .box{
+  margin-top:-30px;
+}
+.blocktable h2 span{
+  width:100%;
+  display:block;
+  background-repeat:no-repeat;
+  background-position:top right;
+  margin-top:-7px;
+  height:17px;
+  margin-right:-2px;
+  padding-top:7px;
+}
+#quickpost h2 span{
+  padding-right:7px;
+}
+.blockpost h2 span.conr, #quickpost h2 span.conr{
+  background-repeat:no-repeat;
+  background-position:top right;
+  margin-top:-7px;
+  height:17px;
+  padding-top:7px;
+  margin-right:-7px;
+  padding-right:7px;
+}
+
+/* pour ne pas afficher : Pied de page des forums */
+
+#brdfooter h2{display:none}
+
+/******* cache les info "en ligne" et co. ******/
+.postfootleft{display:none}
+.postfoot{text-align:right}
+.postfoot li{
+  border-left-width:1px;
+  border-left-style:solid;
+  padding-left:6px;
+  padding-right:5px;
+}
+.postreport{border-left-width:0px !important;}
+/************* pour ne pas que les sujets soit colles a gauche **************/
+.tclcon{
+  float:left;
+  width:96%;
+}
+/********* numero des forums *******/
+.tcl .icon{
+  width:4%;
+  float:left;
+  min-height:20px;
+  height:1em;
+}
+.tcl .icon .nosize{display:none}
+#punindex .tcl .icon-new{
+  background-image:url('../images/forum/imgNewPost.png');
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+/********** icone d'√©pingl√© ******************/
+.stickytext{
+  width:20px;
+  background-position:0 -73px;
+  font-size:0px;
+  height:16px;
+  display:block;
+  float:left;
+  color:transparent;
+}
+.istick strong{
+  display:block;
+  float:left;
+}
+.closedtext{
+  width:20px;
+  background-position:0 -19px;
+  font-size:0px;
+  height:16px;
+  display:block;
+  float:left;
+  color:transparent;
+}
+.iclosed{font-style:italic}
+.movedtext{
+  width:20px;
+  background-position:0 -37px;
+  font-size:0px;
+  height:16px;
+  display:block;
+  float:left;
+  color:transparent;
+}
+
+/******** nom des forums ********/
+.tclcon h3
+{/*font-size:1em;*/
+  font-weight:bold;
+  margin-top:0;
+  margin-bottom:0.5em;
+}
+.tclcon h3 a{text-decoration:underline}
+/******* description des forums ******/
+.forumdesc{
+  line-height:1.2em;
+  margin-bottom:3px;
+}
+.inbox table{width:100%}
+#brdstats  .clearb{clear:both;}
+th{
+  text-align:left;
+  font-size:0.91em;
+  font-weight:normal;
+  color:#353535;
+}
+#users1 th{
+  font-weight:bold;
+  color:black;
+  padding-top:5px;
+  font-size:1em;
+}
+th.tcl{padding:0 0 0.5em 2em}
+.postlink{
+  text-align:right;
+  display:block;
+}
+.postlink.conr {
+  font-weight: bold;
+}
+#page_up{
+  text-align:right;
+  margin-top:-2em;
+}
+
+/** signature **/
+
+#punviewtopic .postsignature{
+  margin-bottom:5px;
+}
+
+/* cache les sujets des messages qui ne servent a rien*/
+.postright h3{display:none}
+/* reponse rapide */
+.bblinks li{
+  display:inline;
+  margin-right:20px;
+}
+/* resume message*/
+#postreview .postleft, #punmoderate .postleft{
+  margin:-20px 0 0 0;
+  float:none;
+  width:auto;
+  padding:0;
+}
+#postreview h2{margin-bottom:75px}
+#postreview .postmsg{padding-top:0}
+#punmoderate .postmsg{padding:0}
+#postreview .blockpost{margin-top:30px}
+#postreview .blockpost .postleft dl, #punmoderate .blockpost .postleft dl{
+  margin:0;
+  padding:0;
+}
+.blockpost .postleft dt{padding-left:50px}
+#postreview .blockpost .postleft dt, #punmoderate .blockpost .postleft dt{
+  width:100%;
+  height:44px;
+  padding:4px 6px 31px 50px;
+  background-repeat:no-repeat;
+  margin:-3px -30px 0 -6px;
+}
+/*.postleft dt span{font-size:0.9em}*/
+#postreview .blockpost{background-repeat:repeat-x}
+#postreview .blockpost h2 span{
+  width:100%;
+  display:block;
+  background-repeat:no-repeat;
+  background-position:top right;
+  margin-top:-7px;
+  height:17px;
+  padding-top:7px;
+  margin-right:-7px;
+  padding-right:7px;
+}
+/*#postreview .postleft dd, #punmoderate .postleft dd{font-size:0.9em}*/
+#postpreview .postmsg{margin-top:10px}
+/*Alignement horizontal des champs de recherche dans userlist*/
+#userlist .conl{
+  margin-right:10px;
+  white-space:nowrap;
+}
+
+/* passage √† la ligne pour les explications dans la page userlist*/
+#userlist .clearb{padding-left:5px; clear:both; }
+
+.blockpost .conr{font-weight:normal}
+
+/************** PROFIL **************/
+#profile li{
+  display:inline;
+  margin-right:50px;
+}
+#profile li.isactive{text-decoration:none}
+
+/************ Tableau principal **************/
+#mainindex table{width:100%}
+.tcl{width:61%;}
+.tc1, .tc2, .tc3{width:7%; text-align:center;}
+.tcr{width:25%; padding-left:1em;}
+tbody .tcl, tbody .tc1, tbody .tc2, tbody .tc3, tbody .tc4, tbody .tc5, tbody .tcr{
+  border-bottom:1px solid lightgrey;
+  padding:0.3em 0.15em 0.3em 0;
+}
+tbody .tcl{padding-right:0.5em}
+#punindex .roweven, #punsearch .roweven, #vf .roweven{background-color:#F7F7F7}
+#vf tbody tr:hover, #punindex tbody tr:hover, #punuserlist tbody tr:hover, #punsearch tbody tr:hover{background-color:#E7E7E7}
+#vf tbody a:hover, #punsearch tbody a:hover, #punuserlist tbody a:hover{text-decoration:none}
+.byuser{font-size:0.91em}
+
+/* XABILON : mise en forme des colonnes dans punsearch */
+
+#punsearch .tcl{width:50%}
+#punsearch .tc2{width:23%; text-align:left;}
+/*#punviewtopic .postleft{
+margin:0 10px 0 10px;
+height:20px;
+}*/
+#punviewtopic .postleft dd{
+  margin:0 10px;
+  width:0px;
+}
+
+/* IP pas en gras, et espace avec le pseudo*/
+#punviewtopic .postleft dt span{
+  margin-left:10px;
+  font-weight:normal;
+  width:0px;
+  height:0px;
+}
+.postleft dl{margin-top:-20px}
+.postright{
+  padding-left:75px;
+  padding-top:6px;
+}
+.postleft a{color:black !important}
+.postmsg{
+  padding:5px;
+  min-height:75px;
+}
+.blockpost, .quotebox{
+  border-radius:10px 0px 10px 0px;
+  -o-border-radius:10px 0 10px 0;
+  -moz-border-radius:10px 0px 10px 0px;  
+  -webkit-border-radius:10px 0px 10px 0px;  
+  -khtml-border-radius:10px 0px 10px 0px;  
+}
+.blockpost{
+  position:relative;
+  background-color:#E8E8E8;
+  margin-left:6px;
+  border-color:#B0C0C0;
+  border-style:solid;
+  border-width:0px 0.5px 1px 0px;
+  margin-top:5px;
+  clear:both;
+}
+#quickpost{ background-color:#edebeb; }
+.blockform .buttons{ margin-left:15px; }
+
+/* XABILON :Cadre information + fieldset (l'ancien est ci-dessus)*/
+.inform{
+  margin:10px;
+  padding-bottom:10px;
+  clear:both;
+}
+#profile .inform{padding-top:10px;}
+#profile fieldset, #adminconsole fieldset, #viewprofile fieldset{
+  background-color:#E8E8E8;
+  border:1px solid #606060;
+  border-radius:5px;
+  -o-border-radius:5px;
+  -khtml-border-radius:5px;
+  -moz-border-radius:5px;
+}
+legend{
+  font-weight:bold;
+  padding:0 5px;
+  margin-left:15px;
+}
+label{
+  margin-right:0.5em;
+  padding-top:0.2em;
+}
+
+/* XABILON : Propri√©t√© infldset (liste des signalements) */
+
+.infldset{
+  padding:6px 10px;
+  text-align:left;
+}
+#adminconsole .aligntop{width:100%}
+#adminconsole td span{margin-left:1em}
+#edforum .infldset TD{border-top:1px solid #C0C0C0}
+#censoring .tcl{width:auto}
+#punadmin_reports TH{width:15em;}
+.blockpost h2 span span, .blockpost h2 span a{
+  display:block;
+  float:right;
+  font-size:0.9em;
+}
+.blockpost h2 span span{text-align:right}
+.blockpost h2 span a{
+  color:black !important;
+  font-weight:normal;
+}
+.blockpost h2 span a:hover{text-decoration:none}
+
+/*#mainindex .inbox, mainview* .inbox{clear:both}*/
+#mainindex .inbox, #mainviewforum .inbox, #mainviewindex .inbox{clear:both}
+.inbox li{display:inline}
+.postmsg li{display:list-item}
+.blockpost .box{
+  margin-top:-50px;
+  padding-bottom:10px;
+  min-height:140px;
+}
+.inbox{clear:both}
+.top_links{
+  margin-right:5px;
+  margin-left:5px;
+}
+.blockpost .box .inbox .postbody .postright{float:none}
+#postreview .postright{float:none}
+#postreview .postleft{
+  margin:-20px 0 0 0;
+  padding:0px;
+  float:none;
+  width:auto;
+}
+/* quote */
+.quotebox{
+  background:#fdfcfd url('../images/forum/quote.png') no-repeat;
+  background-position:top left;
+  min-height:70px;
+  border-color:#A8A8A8 #C8C8C8 #C8C8C8 #A8A8A8;
+  border-style:solid;
+  border-width:1px;
+  margin:9px 0.2em 1em;
+  padding-top:0.2em;
+  overflow:hidden; 
+}
+/* codebox */
+.codebox{
+  font-family:Consolas,'Lucida Console','Bitstream Vera Sans Mono','DejaVu Sans Mono',monospace;
+  font-size:1.1em;
+  max-height:26em;
+  border:1px solid;
+  color:white;
+  background-color:#333;
+  overflow:auto;
+  margin:9px 0.2em 1em;
+  padding:0.3em 0.5em;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+.codebox pre{margin:0; white-space:pre;}
+/* liste dans message*/
+.postmsg ul{list-style-type:disc}
+.postmsg ol.alpha{list-style-type:lower-alpha}
+.postmsg ol.decimal{list-style-type:decimal}
+
+/* cache les titres des pages du profil */
+#profile h2{display:none}
+
+/* Blocs de formulaires*/
+
+.blockform h2{
+  font-size:1.1em;
+  padding-top:10px;
+  padding-left:40px;
+  margin-right:10px;
+  padding-right:6px;
+}
+.fakeform, .blockform{
+  -o-border-radius:10px;
+  -khtml-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  border-bottom:1px solid grey;
+  border-right:1px solid grey;
+  background-color:lightgrey
+}
+.postedit{text-align:right}
+.postfootright ul{
+  margin:0px;
+  font-size:0.90em;
+}
+.postsignature p{margin:0}
+textarea{
+  width:99%;
+  padding:3px;
+}
+#punuserlist .linkst{margin:0 0 30px 0}
+cite{margin-left:10px; font-size:0.9em;}
+.modlist{display:none}
+#onlinelist dd, #onlinelist dl, #onlinelist dt{
+  display:inline;
+  margin:0px
+}
+#footer{margin-left:16em}
+
+/* Menu onglets profil */
+
+#profile .blockmenu{
+  width:100%;
+  height:4em;
+  margin-top:8px;
+  padding-top:1em;
+  padding-left:0;
+  -o-border-radius:5px;
+  -moz-border-radius:5px;
+  -khtml-border-radius:5px;
+  border-radius:5px;
+  border-bottom:1px solid grey;
+  border-right:1px solid grey;
+}
+#profile .blockmenu ul{
+  margin-left:0;
+  border-bottom:1px solid #8E9090;
+  text-align:center;
+}
+#profile .blockmenu li{
+  -o-border-radius:5px 5px 0 0;
+  -khtml-border-radius:5px 5px 0 0;
+  -moz-border-radius:5px 5px 0 0;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  background-repeat:repeat-x;
+  border-color:#BEC0C0;
+  border-style:outset;
+  border-width:1px 1px 0;
+  margin-right:-3px;
+  padding:0.5em 0.8em 0em 0.8em;
+  font-weight:bold;
+}
+#profile .blockmenu li.isactive{
+  border-bottom-width:3px;
+  border-bottom-style:solid;
+  text-decoration:none;
+}
+#profile .blockmenu a{color:black}
+#profile .blockmenu a:hover{text-decoration:none}
+#searchlinks{display:none}
+
+/* zone pied de fil pour mod√©rateurs*/
+
+#brdfooter{
+  margin:0;
+  padding:0 8px 1px 8px;
+  display:block;
+}
+#brdfooter dt{display:none}
+.end-box{
+  height:5px;
+  margin-bottom:20px;
+  margin-top:0;
+  -o-border-radius:0 0 5px 5px;
+  -moz-border-radius:0 0 5px 5px;
+  -khtml-border-radius:0 0 5px 5px;
+  -webkit-border-bottom-left-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-radius:0 0 5px 5px;
+  border-style:solid;
+  border-color:#BEC0C0;
+  border-width:0 1px 1px 1px;
+  background-color:white;
+}
+.top-box{height:5px}
+#main, .top-box{
+  margin-bottom:0;
+  -moz-border-radius:5px 5px 0 0;
+  -khtml-border-radius:5px 5px 0 0;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -o-border-radius:5px 5px 0 0;
+  border-radius:5px 5px 0 0;
+  border-style:solid;
+  border-color:#BEC0C0;
+  border-width:1px 1px 0 1px;
+  background-color:white;
+}
+#brdmain{
+  margin:0;
+  border-style:solid;
+  border-color:#BEC0C0;
+  border-width:0 1px 0 1px;
+  background-color:white;
+}
+#poweredby{text-align:right}
+#brdwelcome{
+  clear:none;
+  float:right;
+  text-align:right;
+}
+
+.pagelink, #punsearch #msg .inbox p, #punsearch #msg, #rules{margin-bottom:0px}
+/* redirection*/
+
+
+p.pagelink{padding:0px}
+.reportlink{
+  clear:both;
+  display:block !important;
+  margin-bottom:-20px;
+}
+.reportlink a{
+  color:red !important;
+  background-position:0 -55px;
+  padding-left:25px;
+}
+
+#brdfooternav .clearer{clear:both}
+#brdfooternav p{
+  margin:0px;
+  padding:0px;
+}
+#postreview .postleft dd span{padding-left:2em}
+.usertitle{
+  color:#353535;
+  white-space:nowrap;
+}
+.usertitle strong{font-weight:normal}
+.postmsg p{word-wrap:break-word}
+#main{overflow:hidden}
+.postavatar{
+  position:absolute;
+  top:42px;
+  left:0;
+}
+.blockpost{min-height:140px}
+
+span.bbs{text-decoration:line-through}
+span.bbu{text-decoration:underline}
+.postsignature{min-height:0px; font-size:0.9em;}
+
+/* Mise en forme de l'affichage des r√®gles*/
+#regles li{
+  list-style-type:decimal;
+  display:list-item;
+}
+
+/** Cadres Accueil et gagnant du Mois **/
+
+#announce-welcome{min-height:101px}
+#announce-welcome table{
+  min-height:101px;
+  width:100%;
+}
+#announce-welcome tbody{
+  height:100%;
+  min-height:101px;
+}
+.welcome{
+  width:75%;
+  height:100%;
+  background-repeat:repeat-y; 
+  border:1px solid #B0C0C0;
+  border-radius:8px;
+  -o-border-radius:8px;
+  -moz-border-radius:8px;
+  -khtml-border-radius:8px;
+}
+.welcome p{margin:0.6em}
+.winner{
+  height:100%;
+  border:1px solid lightgrey;
+  -o-border-radius:8px;
+  -moz-border-radius:8px;
+  -khtml-border-radius:8px;
+  border-radius:8px;
+  background-color:#F0F0F0;
+  vertical-align:top;
+}
+#winner_inbox{
+  padding-right:5px;
+  width:100%;
+  min-height:101px;
+  background-repeat:no-repeat;
+  background-position:top right;
+}
+#winner_inbox p{margin:0; margin-top:-5px; margin-left:-5px; padding:1em 54px 0.6em 0.6em; vertical-align:middle;
+
+}
+.linux_pratique{
+  font-weight:bold;
+  font-size:1.2em;
+}
+.winner_name{
+font-style:italic;
+font-size:1.1em;
+}
+video{max-width:50%}
+#postpreview .postmsg h5{margin-top:2em}
+.postlinkst .subscribelink{display:none}
+#punadmin_users .tc2, #punuserlist .tc4{width:15%}
+#punadmin_users .tcl{
+  width:20%;
+  padding-left:20px;
+}
+#punadmin_users .tc3{
+  width:15%;
+  font-size:0.9em;
+}
+.block-inner{position:absolute;bottom:0;margin-left:16em;}
+.block-inner li{
+  display:inline;
+  list-style:none outside none;
+  padding:0;
+}
+.block-inner li.first{
+  border-right:1px solid #000000;
+  padding-right:1em;
+}
+.block-inner li.last{
+  border-left:1px solid #000000;
+  padding-left:1em;
+}
+.block-inner ul{
+  margin:0 0 2px 0;
+}
+.block-inner a{color:#323232}
+
+img{vertical-align:middle}
+.postimg img{max-width:100%}
+button{cursor:pointer}
+#toolbar img{cursor:pointer}
+li.postedit, #wrapper textarea, #wrapper input, #wrapper select {font-size:1em}
+div.postright a{text-decoration:underline}
+.postright a:visited{color:#551A8B}
+p.postedit{font-size:0.9em; color:#666;}
+
+/********************************************* DEBUT OPTIMISATION *******************************/
+.conr{float:right;text-align:right}
+.conl{float:left}
+.conr, .conl{display:block}
+.postbody{padding:2px 0 0 0}
+.postleft, .postleft dl, .postleft dl dt, .postleft dl dd{display:inline}
+.postleft dl dt span a{margin-right:10px}
+.postleft{width:auto; vertical-align:middle}
+.blockpost .inbox{clear:none}
+.postleft dl{margin:0; padding:0}
+
+
+/************* RUSTINE PAGE LOGIN **********************/
+#login { width: 100%; color:black; text-align:left;}
+#login label {display: block;}
+#login .buttons input {background-color:white; border: medium outset;}
+.clearb {clear:both;}
+%xW”QX      ^Ω’^Ω’A™˙∂^∆XU   A    :https://www-static.ubuntu-fr.org/theme2010/css/forum-general.css necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Server: nginx/1.12.1
+Date: Thu, 14 May 2020 10:30:45 GMT
+Content-Type: text/css
+Content-Length: 19253
+Last-Modified: Wed, 25 Apr 2018 12:34:03 GMT
+ETag: "5ae075bb-4b35"
+Accept-Ranges: bytes
+ original-response-headers Server: nginx/1.12.1
+Date: Thu, 14 May 2020 10:30:45 GMT
+Content-Type: text/css
+Content-Length: 19253
+Last-Modified: Wed, 25 Apr 2018 12:34:03 GMT
+Connection: keep-alive
+ETag: "5ae075bb-4b35"
+Accept-Ranges: bytes
+ ctid 5 uncompressed-len 0 net-response-time-onstart 153 net-response-time-onstop 156   K5

@@ -1,0 +1,21 @@
+'.source.yaml':
+  'jobflowinstancesconfig':
+      'prefix': 'jobflowinstancesconfig'
+      'body':"""
+         AdditionalMasterSecurityGroups:                # optional, list of String
+         	- ${2:String}
+         AdditionalSlaveSecurityGroups:                # optional, list of String
+         	- ${3:String}
+         CoreInstanceFleet: ${4:InstanceFleetConfig}     # optional
+         CoreInstanceGroup: ${5:InstanceGroupConfig}     # optional
+         Ec2KeyName: ${6:String}     # optional
+         Ec2SubnetId: ${7:String}     # optional
+         EmrManagedMasterSecurityGroup: ${8:String}     # optional
+         EmrManagedSlaveSecurityGroup: ${9:String}     # optional
+         HadoopVersion: ${10:String}     # optional
+         MasterInstanceFleet: ${11:InstanceFleetConfig}     # optional
+         MasterInstanceGroup: ${12:InstanceGroupConfig}     # optional
+         Placement: ${13:PlacementType}     # optional
+         ServiceAccessSecurityGroup: ${14:String}     # optional
+         TerminationProtected: ${15:Boolean}     # optional
+"""

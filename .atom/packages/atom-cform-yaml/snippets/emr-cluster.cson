@@ -1,0 +1,27 @@
+'.source.yaml':
+  'emr-cluster':
+      'prefix': 'emr-cluster'
+      'body':"""
+         ${1:emr-cluster_name}:
+         	Type: AWS::EMR::Cluster
+         	Properties:
+         		AdditionalInfo: ${2:Json}     # optional
+         		Applications:                # optional, list of Application
+         			- ${3:Application}
+         		AutoScalingRole: ${4:String}     # optional
+         		BootstrapActions:                # optional, list of BootstrapActionConfig
+         			- ${5:BootstrapActionConfig}
+         		Configurations:                # optional, list of Configuration
+         			- ${6:Configuration}
+         		Instances: ${7:JobFlowInstancesConfig}     # required
+         		JobFlowRole: ${8:String}     # required
+         		LogUri: ${9:String}     # optional
+         		Name: ${10:String}     # required
+         		ReleaseLabel: ${11:String}     # optional
+         		ScaleDownBehavior: ${12:String}     # optional
+         		SecurityConfiguration: ${13:String}     # optional
+         		ServiceRole: ${14:String}     # required
+         		Tags:                # optional, list of Tag
+         			- ${15:Tag}
+         		VisibleToAllUsers: ${16:Boolean}     # optional
+"""

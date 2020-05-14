@@ -1,0 +1,7 @@
+'.source.yaml':
+  'attributedefinition':
+      'prefix': 'attributedefinition'
+      'body':"""
+         AttributeName: ${2:String}     # required
+         AttributeType: ${3:String}     # required
+"""

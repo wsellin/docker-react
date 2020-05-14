@@ -1,0 +1,16 @@
+'.source.yaml':
+  'subnet':
+      'prefix': 'subnet'
+      'body':"""
+         ${1:subnet_name}:
+         	Type: AWS::EC2::Subnet
+         	Properties:
+         		AssignIpv6AddressOnCreation: ${2:Boolean}     # optional
+         		AvailabilityZone: ${3:String}     # optional
+         		CidrBlock: ${4:String}     # required
+         		Ipv6CidrBlock: ${5:String}     # optional
+         		MapPublicIpOnLaunch: ${6:Boolean}     # optional
+         		Tags:                # optional, list of Tag
+         			- ${7:Tag}
+         		VpcId: ${8:String}     # required
+"""

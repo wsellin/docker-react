@@ -1,0 +1,14 @@
+'.source.yaml':
+  'vpcpeeringconnection':
+      'prefix': 'vpcpeeringconnection'
+      'body':"""
+         ${1:vpcpeeringconnection_name}:
+         	Type: AWS::EC2::VPCPeeringConnection
+         	Properties:
+         		PeerOwnerId: ${2:String}     # optional
+         		PeerRoleArn: ${3:String}     # optional
+         		PeerVpcId: ${4:String}     # required
+         		Tags:                # optional, list of Tag
+         			- ${5:Tag}
+         		VpcId: ${6:String}     # required
+"""

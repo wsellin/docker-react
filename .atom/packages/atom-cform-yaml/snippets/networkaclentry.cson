@@ -1,0 +1,17 @@
+'.source.yaml':
+  'networkaclentry':
+      'prefix': 'networkaclentry'
+      'body':"""
+         ${1:networkaclentry_name}:
+         	Type: AWS::EC2::NetworkAclEntry
+         	Properties:
+         		CidrBlock: ${2:String}     # required
+         		Egress: ${3:Boolean}     # optional
+         		Icmp: ${4:Icmp}     # optional
+         		Ipv6CidrBlock: ${5:String}     # optional
+         		NetworkAclId: ${6:String}     # required
+         		PortRange: ${7:PortRange}     # optional
+         		Protocol: ${8:Integer}     # required
+         		RuleAction: ${9:String}     # required
+         		RuleNumber: ${10:Integer}     # required
+"""

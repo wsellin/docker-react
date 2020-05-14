@@ -1,0 +1,50 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball",
+  "_id": "atom-cform-yaml@0.5.1-0",
+  "_inBundle": false,
+  "_integrity": "sha512-U/gWqKJ5iB+aenDC8UVkfbQFeBaHcGjnkvs7foSbhfp8NkWmpthsEeLKYpGg1jaOdGQGrczLyupsv37oAXDW8A==",
+  "_location": "/atom-cform-yaml",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball",
+  "_shasum": "0a90e5ee111052fd828a21adca7f672749416587",
+  "_spec": "https://www.atom.io/api/packages/atom-cform-yaml/versions/0.5.1-0/tarball",
+  "_where": "/tmp/apm-install-dir-120412-17674-dwuwvy.skdkt",
+  "activationCommands": {
+    "atom-workspace": "atom-cform-yaml:toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/jpbarto/atom-cform-yaml/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Collection of snippets for easily authoring AWS CloudFormation templates using YAML",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/jpbarto/atom-cform-yaml#readme",
+  "keywords": [
+    "yaml",
+    "aws",
+    "cloudformation"
+  ],
+  "license": "MIT",
+  "main": "./lib/atom-cform-yaml",
+  "name": "atom-cform-yaml",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpbarto/atom-cform-yaml.git"
+  },
+  "version": "0.5.1-0"
+}

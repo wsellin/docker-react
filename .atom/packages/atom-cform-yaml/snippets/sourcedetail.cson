@@ -1,0 +1,8 @@
+'.source.yaml':
+  'sourcedetail':
+      'prefix': 'sourcedetail'
+      'body':"""
+         EventSource: ${2:String}     # required
+         MaximumExecutionFrequency: ${3:String}     # optional
+         MessageType: ${4:String}     # required
+"""

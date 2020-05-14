@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="gnome-control-center.desktop" open-window-count="0" score="97" last-seen="1589463346"/>
+    <application id="firefox.desktop" open-window-count="3" score="1287" last-seen="1589468546"/>
+    <application id="org.gnome.Nautilus.desktop" open-window-count="3" score="1579" last-seen="1589466519"/>
+    <application id="update-manager.desktop" open-window-count="0" score="0" last-seen="1589286601"/>
+    <application id="software-properties-gtk.desktop" open-window-count="0" score="9" last-seen="1589301070"/>
+    <application id="gnome-language-selector.desktop" open-window-count="0" score="39" last-seen="1589286564"/>
+    <application id="chromium_chromium.desktop" open-window-count="1" score="39" last-seen="1589468824"/>
+    <application id="org.gnome.gedit.desktop" open-window-count="0" score="3" last-seen="1589297803"/>
+    <application id="brackets.desktop" open-window-count="0" score="1" last-seen="1589298493"/>
+    <application id="atom_atom.desktop" open-window-count="0" score="371" last-seen="1589466890"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="3" score="996" last-seen="1589467998"/>
+    <application id="code_code.desktop" open-window-count="1" score="78" last-seen="1589467413"/>
+    <application id="gnome-initial-setup.desktop" open-window-count="0" score="42" last-seen="1589287728"/>
+    <application id="org.gnome.Software.desktop" open-window-count="1" score="128" last-seen="1589468108"/>
+    <application id="notepadqq_notepadqq.desktop" open-window-count="0" score="51" last-seen="1589299034"/>
+  </context>
+</application-state>

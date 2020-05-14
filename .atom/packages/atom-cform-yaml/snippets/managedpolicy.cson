@@ -1,0 +1,18 @@
+'.source.yaml':
+  'managedpolicy':
+      'prefix': 'managedpolicy'
+      'body':"""
+         ${1:managedpolicy_name}:
+         	Type: AWS::IAM::ManagedPolicy
+         	Properties:
+         		Description: ${2:String}     # optional
+         		Groups:                # optional, list of String
+         			- ${3:String}
+         		ManagedPolicyName: ${4:String}     # optional
+         		Path: ${5:String}     # optional
+         		PolicyDocument: ${6:Json}     # required
+         		Roles:                # optional, list of String
+         			- ${7:String}
+         		Users:                # optional, list of String
+         			- ${8:String}
+"""

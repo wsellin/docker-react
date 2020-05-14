@@ -1,0 +1,18 @@
+'.source.yaml':
+  'ec2-securitygroupingress':
+      'prefix': 'ec2-securitygroupingress'
+      'body':"""
+         ${1:ec2-securitygroupingress_name}:
+         	Type: AWS::EC2::SecurityGroupIngress
+         	Properties:
+         		CidrIp: ${2:String}     # optional
+         		CidrIpv6: ${3:String}     # optional
+         		FromPort: ${4:Integer}     # optional
+         		GroupId: ${5:String}     # optional
+         		GroupName: ${6:String}     # optional
+         		IpProtocol: ${7:String}     # required
+         		SourceSecurityGroupId: ${8:String}     # optional
+         		SourceSecurityGroupName: ${9:String}     # optional
+         		SourceSecurityGroupOwnerId: ${10:String}     # optional
+         		ToPort: ${11:Integer}     # optional
+"""

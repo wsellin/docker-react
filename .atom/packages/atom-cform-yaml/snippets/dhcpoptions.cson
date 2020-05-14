@@ -1,0 +1,18 @@
+'.source.yaml':
+  'dhcpoptions':
+      'prefix': 'dhcpoptions'
+      'body':"""
+         ${1:dhcpoptions_name}:
+         	Type: AWS::EC2::DHCPOptions
+         	Properties:
+         		DomainName: ${2:String}     # optional
+         		DomainNameServers:                # optional, list of String
+         			- ${3:String}
+         		NetbiosNameServers:                # optional, list of String
+         			- ${4:String}
+         		NetbiosNodeType: ${5:Integer}     # optional
+         		NtpServers:                # optional, list of String
+         			- ${6:String}
+         		Tags:                # optional, list of Tag
+         			- ${7:Tag}
+"""

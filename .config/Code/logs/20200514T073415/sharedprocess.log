@@ -1,0 +1,9 @@
+[2020-05-14 07:34:20.510] [sharedprocess] [info] main {"machineId":"82ec85ec8ec65953edd9cbe05499fd05d2d96797d0b8eb9c2f91c66e19350143","windowId":2}
+[2020-05-14 07:34:20.670] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/walter/.config/Code/User/snippets'
+[2020-05-14 07:35:00.571] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-05-14 07:35:00.846] [sharedprocess] [info] Installing extension: ms-azuretools.vscode-docker
+[2020-05-14 07:36:08.247] [sharedprocess] [info] Downloaded extension: ms-azuretools.vscode-docker /tmp/8b5d53b4-7f6e-4b6c-95f4-cdb4288a6648
+[2020-05-14 07:36:09.595] [sharedprocess] [info] Extracted extension to /home/walter/.vscode/extensions/.ms-azuretools.vscode-docker-1.2.0: ms-azuretools.vscode-docker
+[2020-05-14 07:36:09.596] [sharedprocess] [info] Renamed to /home/walter/.vscode/extensions/ms-azuretools.vscode-docker-1.2.0
+[2020-05-14 07:36:09.603] [sharedprocess] [info] Installation completed. ms-azuretools.vscode-docker
+[2020-05-14 07:36:09.707] [sharedprocess] [info] Extensions installed successfully: ms-azuretools.vscode-docker

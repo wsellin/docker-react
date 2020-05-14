@@ -1,0 +1,45 @@
+'.source.yaml':
+  'ec2-instance':
+      'prefix': 'ec2-instance'
+      'body':"""
+         ${1:ec2-instance_name}:
+         	Type: AWS::EC2::Instance
+         	Properties:
+         		AdditionalInfo: ${2:String}     # optional
+         		Affinity: ${3:String}     # optional
+         		AvailabilityZone: ${4:String}     # optional
+         		BlockDeviceMappings:                # optional, list of BlockDeviceMapping
+         			- ${5:BlockDeviceMapping}
+         		DisableApiTermination: ${6:Boolean}     # optional
+         		EbsOptimized: ${7:Boolean}     # optional
+         		HostId: ${8:String}     # optional
+         		IamInstanceProfile: ${9:String}     # optional
+         		ImageId: ${10:String}     # required
+         		InstanceInitiatedShutdownBehavior: ${11:String}     # optional
+         		InstanceType: ${12:String}     # optional
+         		Ipv6AddressCount: ${13:Integer}     # optional
+         		Ipv6Addresses:                # optional, list of InstanceIpv6Address
+         			- ${14:InstanceIpv6Address}
+         		KernelId: ${15:String}     # optional
+         		KeyName: ${16:String}     # optional
+         		Monitoring: ${17:Boolean}     # optional
+         		NetworkInterfaces:                # optional, list of NetworkInterface
+         			- ${18:NetworkInterface}
+         		PlacementGroupName: ${19:String}     # optional
+         		PrivateIpAddress: ${20:String}     # optional
+         		RamdiskId: ${21:String}     # optional
+         		SecurityGroupIds:                # optional, list of String
+         			- ${22:String}
+         		SecurityGroups:                # optional, list of String
+         			- ${23:String}
+         		SourceDestCheck: ${24:Boolean}     # optional
+         		SsmAssociations:                # optional, list of SsmAssociation
+         			- ${25:SsmAssociation}
+         		SubnetId: ${26:String}     # optional
+         		Tags:                # optional, list of Tag
+         			- ${27:Tag}
+         		Tenancy: ${28:String}     # optional
+         		UserData: ${29:String}     # optional
+         		Volumes:                # optional, list of Volume
+         			- ${30:Volume}
+"""

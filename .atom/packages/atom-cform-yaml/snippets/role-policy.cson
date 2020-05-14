@@ -1,0 +1,7 @@
+'.source.yaml':
+  'role-policy':
+      'prefix': 'role-policy'
+      'body':"""
+         PolicyDocument: ${2:Json}     # required
+         PolicyName: ${3:String}     # required
+"""

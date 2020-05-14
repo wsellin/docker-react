@@ -1,0 +1,23 @@
+'.source.yaml':
+  'stagedescription':
+      'prefix': 'stagedescription'
+      'body':"""
+         CacheClusterEnabled: ${2:Boolean}     # optional
+         CacheClusterSize: ${3:String}     # optional
+         CacheDataEncrypted: ${4:Boolean}     # optional
+         CacheTtlInSeconds: ${5:Integer}     # optional
+         CachingEnabled: ${6:Boolean}     # optional
+         ClientCertificateId: ${7:String}     # optional
+         DataTraceEnabled: ${8:Boolean}     # optional
+         Description: ${9:String}     # optional
+         DocumentationVersion: ${10:String}     # optional
+         LoggingLevel: ${11:String}     # optional
+         MethodSettings:                # optional, list of MethodSetting
+         	- ${12:MethodSetting}
+         MetricsEnabled: ${13:Boolean}     # optional
+         StageName: ${14:String}     # optional
+         ThrottlingBurstLimit: ${15:Integer}     # optional
+         ThrottlingRateLimit: ${16:Double}     # optional
+         Variables:                # optional, map of String
+         	${17:String_key}: ${18:String_value}
+"""
